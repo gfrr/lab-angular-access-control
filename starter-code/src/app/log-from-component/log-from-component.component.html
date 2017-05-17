@@ -1,0 +1,30 @@
+<form class="form" (ngSubmit)="addMessage(person, message)" #myForm="ngForm">
+    <p> Person
+    </p>
+    <input type="text" name="person" [(ngModel)]="person"  minlength="4" #myUsername="ngModel"/>
+      <div *ngIf="myUsername.errors && (myUsername.dirty || myUsername.touched)">
+    <p class="error" [hidden]="!myUsername.errors.minlength">
+      Username must be at least 4 characters long.
+    </p>
+  </div>
+    <p> Message
+
+    </p>
+    <input type="text" name="message" [(ngModel)]="message"  minlength="10" #myMessage="ngModel"/>
+        <div *ngIf="myMessage.errors && (myMessage.dirty || myMessage.touched)">
+    <p class="error" [hidden]="!myMessage.errors.minlength">
+      Message should be at least 10 characters long.
+    </p>
+      </div>
+      <button type="submit"> add message </button>
+
+</form>
+<div class="form">
+  <button (click)="showAll()">console log</button>
+  <div *ngIf=!dismissed>
+    <p>
+      MESSAGE ADDED!
+    </p>
+  </div>
+
+</div>

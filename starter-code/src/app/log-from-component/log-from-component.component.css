@@ -1,0 +1,39 @@
+* {
+  font-family: Helvetica;
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+}
+
+.form p {
+
+
+}
+
+button {
+  color: rgba(255,100,100, 1);
+  margin: 20px auto;
+  width: 100px;
+  border: 2px solid grey;
+}
+
+button:active {
+  background-color: rgba(255,100,100, 1);
+  color: grey;
+}
+
+.ng-touched {
+  border-color: blue;
+}
+
+.ng-touched.ng-invalid {
+  border-color: red;
+}
+
+.ng-touched.ng-valid {
+  border-color: green;
+}
